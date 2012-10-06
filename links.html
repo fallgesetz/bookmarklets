@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Bookmarklet</title>
+</head>
+<body>
+<a href="javascript:
+(function() {
+var video_elms = document.getElementsByTagName('video');
+if( video_elms ) {
+	var rate = 1.0;
+	rate = prompt('Enter a new playback rate', rate);
+	for (var i = 0; i < video_elms.length; i++) {
+		video_elms[i].playbackRate = rate;
+	}
+}
+})();">Change playback rate</a>
+</body>
+</html>
